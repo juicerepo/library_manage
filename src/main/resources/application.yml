@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: "jdbc:mysql://localhost:3306/demodb?useSSL=false&characterEncoding=utf8"
+    username: "root"
+    password: "2004"
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+#  jpa:
+#    hibernate:
+#      ddl-auto: update  # 关键配置！自动创建/更新表结构
+#    show-sql: true      # 显示生成的SQL语句（便于调试）
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL8Dialect
+#        format_sql: true
+  server:
+    port: 8081
+
+  logging:
+    level:
+      com.gondor.isildur.aop: DEBUG
+    pattern:
+      console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+#  devtools:
+#    livereload:
+#      enabled: true
+#      port: 8080
+#    restart:
+#      enabled: true
+
+  jackson:
+    default-property-inclusion: NON_NULL
